@@ -16,3 +16,13 @@ Array.prototype.bubbleSort1 = function () {
   }
   return this;
 };
+
+String.prototype.substrings = function () {
+  let returnArray = [];
+  for (var i = 0; i < this.length; i++) {
+    for (var j = i + 1; j <= this.length; j++) {
+      returnArray.push(this.slice(i, j));
+    }
+  }
+  return returnArray;
+};
