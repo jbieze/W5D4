@@ -9,7 +9,14 @@ function range(start, end) {
 }
 
 function sumRec(arr) {
+  if (arr.length === 0) {
+    return 0;
+  } else {
+    let lastEl = arr[arr.length - 1];
+    let remainingArr = arr.slice(0, -1);
+    return sumRec(remainingArr) + lastEl;
 
+  }
 }
 
 function exponent(base, exp) {
