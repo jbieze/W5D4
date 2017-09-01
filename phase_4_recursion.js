@@ -56,7 +56,16 @@ function exponent2(base, exp) {
 // }
 
 function fibonacci(n) {
-
+  if (n === 1) {
+    return [1];
+  } else if (n === 2) {
+    return [1, 1];
+  } else {
+    let prevFibs = fibonacci(n - 1);
+    let fibLength = prevFibs.length;
+    prevFibs.push(prevFibs[fibLength - 1] + prevFibs[fibLength - 2]);
+    return prevFibs;
+  }
 }
 
 function bsearch(arr, target) {
