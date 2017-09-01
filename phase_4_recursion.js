@@ -69,5 +69,22 @@ function fibonacci(n) {
 }
 
 function bsearch(arr, target) {
+  let midpoint = Math.floor(arr.length / 2);
+  if (arr.length === 0) {
+      return -1;
+  } else if (arr[midpoint] === target) {
+    return midpoint;
+  } else if (arr[midpoint] > target) {
+    return bsearch(arr.slice(0, midpoint), target);
+  } else {
+    return bsearch(arr.slice(midpoint + 1, arr.length), target) + midpoint + 1;
+  }
+}
+
+function mergesort(arr) {
+
+}
+
+function subsets(arr) {
 
 }
